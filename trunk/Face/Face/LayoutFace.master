@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="LayoutFace.master.cs"
+    Inherits="Face.LayoutFace" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="contentorMainMenuCorpo">
+        <div id="contentorMenu">
+            <div class="userState">
+                <h3>
+                    Olá</h3>
+                <img align="left" src="images/user.png" alt="Eu" width="32" height="48" />
+                <a href="#">NOME</a><br />
+                <br />
+                <a href="#">editar o meu perfil</a><br />
+            </div>
+            <div class="listaMenu">
+                <h3>
+                    LOLbook</h3>
+                <li><a href="#" rel="nofollow">
+                    <img align="middle" src="images/amigos.png" alt="amigos" height="20" />Amigos</a></li>
+                <li><a href="#" rel="nofollow">
+                    <img align="middle" src="#" alt="amigos" />escolha2</a></li>
+                <li><a href="#" rel="nofollow">
+                    <img align="middle" src="#" alt="amigos" />escolha3</a></li>
+            </div>
+        </div>
+        <div id="ContentorCorpoInterior">
+            <asp:ContentPlaceHolder ID="corpo" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>

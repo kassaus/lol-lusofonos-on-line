@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Face", "Face\Face.csproj", "{6270F14C-9BA4-44ED-A8C2-32E42B24530B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesUtil", "ClassesUtil\ClassesUtil.csproj", "{57CD0448-A227-4B9D-945E-2D2BFFC2C556}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6270F14C-9BA4-44ED-A8C2-32E42B24530B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6270F14C-9BA4-44ED-A8C2-32E42B24530B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6270F14C-9BA4-44ED-A8C2-32E42B24530B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6270F14C-9BA4-44ED-A8C2-32E42B24530B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57CD0448-A227-4B9D-945E-2D2BFFC2C556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57CD0448-A227-4B9D-945E-2D2BFFC2C556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57CD0448-A227-4B9D-945E-2D2BFFC2C556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57CD0448-A227-4B9D-945E-2D2BFFC2C556}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

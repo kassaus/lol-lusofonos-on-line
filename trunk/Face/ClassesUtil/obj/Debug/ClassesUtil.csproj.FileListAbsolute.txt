@@ -1,0 +1,5 @@
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\ClassesUtil\obj\Debug\ResolveAssemblyReference.cache
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\ClassesUtil\bin\Debug\ClassesUtil.dll
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\ClassesUtil\bin\Debug\ClassesUtil.pdb
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\ClassesUtil\obj\Debug\ClassesUtil.dll
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\ClassesUtil\obj\Debug\ClassesUtil.pdb

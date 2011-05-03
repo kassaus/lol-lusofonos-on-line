@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="Face.Site2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="estilo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="contentorCabecalho">
+        <div class="cabecalho">
+            <div class="AreaLogoCabecalho">
+                <img alt="" src="images/logo.gif" />
+            </div>
+            <div id="ContentorMenuCabecalho">
+            <div class="menuCabecalho">
+                <a href="#">Página Inicial</a> <a href="#">Perfil</a><a href="#">etc.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contentorMain">
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>    
+    </form>
+</body>
+</html>
