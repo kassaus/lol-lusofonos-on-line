@@ -1,0 +1,7 @@
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\Face\obj\Debug\ResolveAssemblyReference.cache
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\Face\bin\Face.dll
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\Face\bin\Face.pdb
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\Face\bin\ClassesUtil.dll
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\Face\bin\ClassesUtil.pdb
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\Face\obj\Debug\Face.dll
+D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\Face\obj\Debug\Face.pdb

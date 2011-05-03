@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="Face.Site3" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="estilo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="contentorCabecalho">
+        <div class="cabecalho">
+            <div class="AreaLogoCabecalho">
+                <img alt="" src="images/faceBook.jpg" />
+            </div>
+        </div>
+    </div>
+    <table style="width: 80%;" align="center">
+        <tr>            
+            <td>
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">                  
+            </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        
+    </table>
+    <div id="contentorRodaPe">
+        <div class="rodaPe">
+            <p class="letraAzulPeq">
+                LOL &copy António Lourenço & Paulo Luís</p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
