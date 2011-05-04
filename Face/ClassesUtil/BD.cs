@@ -68,9 +68,9 @@ namespace ClassesUtil
             this.ligacao = ligacao;
             System.Text.ASCIIEncoding converte = new System.Text.ASCIIEncoding();
 
-            List<SqlParameter> parametrosConsultaIdUser = new List<SqlParameter>();
+            
 
-            string consultaUser = "insert into Users(email, password) Values(@parEmail, @parPassword)";            
+            string consultaUser = "insert into Users(email, password) Values(@parEmail, @parPassword)";
 
             List<SqlParameter> parametrosUser = new List<SqlParameter>();
 
@@ -82,13 +82,18 @@ namespace ClassesUtil
 
             if (dadosInseridos != 0)
             {
-
-                string consultaIdUser = "Select idUser from Users Where email LIKE @parEmail";
+                List<SqlParameter> parametrosConsultaIdUser = new List<SqlParameter>();
+                string consultaIdUser = "select * from Users where email LIKE @parEmail";
                 parametrosConsultaIdUser.Add(new SqlParameter("@parEmail", SqlDbType.NVarChar) { Value = campos.ElementAt(0) });
+               // parametrosConsultaIdUser.Add(new SqlParameter("@parEmail", SqlDbType.NVarChar) { Value = "pppluis@gmail.com" });
                 SqlDataReader canal = seleccionaDadosParametros(consultaIdUser, parametrosConsultaIdUser);
-                string teste = canal["idUser"].ToString();
-          
- 
+                
+                if (canal.HasRows)
+                {
+                    canal.Read();
+                    string teste = canal["idUser"].ToString();
+
+                }
                 string consultaCadastro = "insert into Cadastro(idUser, idCidade, nome, apelido, sexo, dataNascimento, email, imagem)" +
            "Values(@parIdUser, @parIdCidade, @parNome, @parApelido, @parSexo, @parDataNascimento, @parEmail, @parImagem)";
 
@@ -139,6 +144,7 @@ namespace ClassesUtil
         public SqlDataReader seleccionaDadosParametros(string strConsulta, IEnumerable<SqlParameter> cmdParametros)
         {
             SqlConnection ligacao = getligacao();
+            SqlDataReader canal;
             //cria um objeto command a partir da stored procedure
             //SqlCommand cmd = new SqlCommand(strSP, cn);
             SqlCommand comando = new SqlCommand(strConsulta, ligacao);
@@ -149,10 +155,9 @@ namespace ClassesUtil
                 par.Direction = System.Data.ParameterDirection.Input;
             }
             //int num = cmd.ExecuteNonQuery();
-            SqlDataReader canal = comando.ExecuteReader();
+            canal = comando.ExecuteReader();
 
             return canal;
-
         }
 
         #endregion
@@ -164,19 +169,21 @@ namespace ClassesUtil
         public int insereDados(string strConsulta, IEnumerable<SqlParameter> cmdParametros)
         {
             //obtem a string de ligacao
-            SqlConnection ligacao = getligacao();
-            //cria um objeto command a partir da stored procedure
-            //SqlCommand cmd = new SqlCommand(strSP, cn);
-            SqlCommand comando = new SqlCommand(strConsulta, ligacao);
-
-            foreach (SqlParameter par in cmdParametros)
+            using (SqlConnection ligacao = getligacao())
             {
-                comando.Parameters.Add(par);
-                par.Direction = System.Data.ParameterDirection.Input;
-            }
+                //cria um objeto command a partir da stored procedure
+                //SqlCommand cmd = new SqlCommand(strSP, cn);
+                SqlCommand comando = new SqlCommand(strConsulta, ligacao);
 
-            int num = comando.ExecuteNonQuery();
-            return num;
+                foreach (SqlParameter par in cmdParametros)
+                {
+                    comando.Parameters.Add(par);
+                    par.Direction = System.Data.ParameterDirection.Input;
+                }
+
+                int num = comando.ExecuteNonQuery();               
+                return num;
+            }
         }
 
         #endregion
