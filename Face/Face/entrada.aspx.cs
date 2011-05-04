@@ -32,9 +32,12 @@ namespace Face
         protected void btnRegisto_Click(object sender, EventArgs e)
         {
             byte[] imageData = null;
-            String[] campos = new String[7];
+            List<string> campos = new List<string>();
             string strConexao = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             int imagelen;
+            System.Text.ASCIIEncoding converte = new System.Text.ASCIIEncoding();
+
+
             BD registo = new BD();
             try
             {
@@ -51,14 +54,15 @@ namespace Face
                         imageData = new byte[fupImagem.PostedFile.InputStream.Length];
                         imagelen = fupImagem.PostedFile.InputStream.Read(imageData, 0, Convert.ToInt32(fupImagem.PostedFile.InputStream.Length));
                     }
-                    campos[0] = TxtEmail.Text;
-                    campos[1] = txtPass.Text;
-                    campos[2] = ddPais.SelectedValue;
-                    campos[3] = txtNome.Text;
-                    campos[4] = TxtApelido.Text;
-                    campos[5] = ddSexo.SelectedValue;
-                    campos[6] = txtDataNascimento.Text;
-                    registo.efectuaRegisto(campos, strConexao, imageData);
+                    campos.Add(TxtEmail.Text);
+                    campos.Add(txtPass.Text);
+                    campos.Add(ddCidade.SelectedValue);
+                    campos.Add(txtNome.Text);
+                    campos.Add(TxtApelido.Text);
+                    campos.Add(ddSexo.SelectedValue);
+                    campos.Add(txtDataNascimento.Text);
+                    campos.Add(converte.GetString(imageData));                    
+                    registo.efectuaRegisto(campos, strConexao);
                 }
 
             }
