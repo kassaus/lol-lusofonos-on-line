@@ -79,6 +79,13 @@
     <Content Include="entrada.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin.master.cs">
+      <DependentUpon>admin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.master.designer.cs">
+      <DependentUpon>admin.master</DependentUpon>
+    </Compile>
     <Compile Include="LayoutFace.master.cs">
       <DependentUpon>LayoutFace.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site3.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin.master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

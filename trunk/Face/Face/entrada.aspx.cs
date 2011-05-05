@@ -62,7 +62,11 @@ namespace Face
                     campos.Add(ddSexo.SelectedValue);
                     campos.Add(txtDataNascimento.Text);
                     campos.Add(converte.GetString(imageData));                    
-                    registo.efectuaRegisto(campos, strConexao);
+                    int registoValido = registo.efectuaRegisto(campos, strConexao);
+                    if (registoValido != 0)
+                    {
+                        Response.Redirect("principal.aspx", false);
+                    }
                 }
 
             }
