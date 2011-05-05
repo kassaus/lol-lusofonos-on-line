@@ -16,15 +16,15 @@
                 <h3>
                     LOLbook (Administração)</h3>
                 <li><a href="#" rel="nofollow">
-                    <img align="middle" src="images/amigos.png" alt="Users" height="20" />Editar Users</a></li>
+                    <img align="middle" src="images/amigos.png" alt="Users" height="20" /> Editar Users</a></li>
                 <li><a href="#" rel="nofollow">
-                    <img align="middle" src="#" alt="Mensagens" />Mensagens</a></li>
+                    <img align="middle" src="images/mensagens.png" alt="Mensagens" height="20" /> Mensagens</a></li>
                 <li><a href="#" rel="nofollow">
-                    <img align="middle" src="#" alt="Reports" />Denuncias</a></li>
+                    <img align="middle" src="images/denuncias.png" alt="Reports" height="20" /> Denuncias</a></li>
                 <li><a href="#" rel="nofollow">
-                    <img align="middle" src="#" alt="Mensagens" />Escrever Msg</a></li>
+                    <img align="middle" src="images/escreverMsg.png" alt="Mensagens" height="20" /> Escrever Msg</a></li>
                 <li><a href="#" rel="nofollow">
-                    <img align="middle" src="#" alt="Categorias" />Categorias</a></li>
+                    <img align="middle" src="images/categorias.png" alt="Categorias" height="20" /> Categorias</a></li>
             </div>
         </div>
         <div id="ContentorCorpoInterior">

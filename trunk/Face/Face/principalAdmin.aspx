@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/layoutAdmin.master" AutoEventWireup="true" CodeBehind="principalAdmin.aspx.cs" Inherits="Face.principalAdmin" %>
+﻿<%@ Page Title="Bem vindo administrador!" Language="C#" MasterPageFile="~/layoutAdmin.master" AutoEventWireup="true" CodeBehind="principalAdmin.aspx.cs" Inherits="Face.principalAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="corpo" runat="server">
  <div class="corpoInterior">
         <p>
