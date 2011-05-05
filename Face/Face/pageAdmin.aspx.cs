@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Face
 {
-    public partial class admin : System.Web.UI.MasterPage
+    public partial class pageAdmin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
