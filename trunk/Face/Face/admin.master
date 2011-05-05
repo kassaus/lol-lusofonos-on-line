@@ -1,3 +1,0 @@
-﻿<%@ Master Language="C#" MasterPageFile="~/LayoutFace.master" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="Face.admin" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="corpo" runat="server">
-</asp:Content>

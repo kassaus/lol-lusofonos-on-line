@@ -11,7 +11,7 @@ namespace Face
 {
 
 
-    public partial class admin
+    public partial class principalAdmin
     {
     }
 }
