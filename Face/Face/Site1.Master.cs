@@ -28,6 +28,8 @@ namespace Face
                 loginValido  = login.verificaUser(TxtEmailLogin.Text, TxtPassLogin.Text, strConexao);
                 if (loginValido)
                 {
+                    Session["user"] = "Paulo Luís";
+                    Session.Timeout = 1;
                     Response.Redirect("principal.aspx", false);
                 }
                 else

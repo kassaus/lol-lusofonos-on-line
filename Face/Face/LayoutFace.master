@@ -10,7 +10,7 @@
                 <h3>
                     Olá</h3>
                 <img align="left" src="images/user.png" alt="Eu" width="32" height="48" />
-                <a href="#">NOME</a><br />
+                <a href="#"><asp:Label ID="lblNome" runat="server" Text=""></asp:Label></a><br />
                 <br />
                 <a href="#">editar o meu perfil</a><br />
             </div>
@@ -20,9 +20,9 @@
                 <li><a href="#" rel="nofollow">
                     <img align="middle" src="images/amigos.png" alt="amigos" height="20" />Amigos</a></li>
                 <li><a href="#" rel="nofollow">
-                    <img align="middle" src="#" alt="amigos" />escolha2</a></li>
+                    <img align="middle" src="images/escreverMsg.png" alt="mensagens" height="20" />Mensagens</a></li>
                 <li><a href="#" rel="nofollow">
-                    <img align="middle" src="#" alt="amigos" />escolha3</a></li>
+                    <img align="middle" src="images/categorias.png" alt="categorias" height="20" />Categorias</a></li>
             </div>
         </div>
         <div id="ContentorCorpoInterior">

@@ -11,6 +11,14 @@ namespace Face
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["user"] == null)
+            {
+                Response.Redirect("entrada.aspx", false);
+            }
+            else
+            {
+                lblNome.Text = Session["user"].ToString();
+            }
 
         }
     }
