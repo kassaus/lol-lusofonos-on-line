@@ -19,7 +19,8 @@
                 <div class="divUserName">
                     <asp:Label ID="Label1" runat="server" Text="Email" CssClass="letraBrancoPeq"></asp:Label><br />
                     <asp:TextBox CssClass="BoxLogin" ID="TxtEmailLogin" runat="server"></asp:TextBox><br />
-                    <asp:CheckBox class="letraAzulPeq" ID="chksessao" runat="server" Text="Manter sessão iniciada" />
+                    <asp:CheckBox class="letraAzulPeq" ID="chksessao" runat="server" 
+                        Text="Manter sessão iniciada" oncheckedchanged="chksessao_CheckedChanged" />
                 </div>
                 <div class="divPass">
                     <asp:Label ID="Label2" runat="server" Text="Password" CssClass="letraBrancoPeq"></asp:Label><br />

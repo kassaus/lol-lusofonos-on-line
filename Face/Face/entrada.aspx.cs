@@ -31,6 +31,7 @@ namespace Face
 
         protected void btnRegisto_Click(object sender, EventArgs e)
         {
+         
             byte[] imageData = null;
             List<string> campos = new List<string>();
             string strConexao = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
@@ -44,8 +45,8 @@ namespace Face
                 bool userValidado = registo.verificaUser(TxtEmail.Text.Trim(), txtPass.Text.Trim(), strConexao);
                 if (userValidado)
                 {
-                    lblErroUserRegistado.Visible = true;
-                    lblErroUserRegistado.Text = "Este email já se encontra a ser utilizado!";
+                    lblUserValidado.Visible = true;
+                    lblUserValidado.Text = "Este email já se encontra a ser utilizado!";
                 }
                 else
                 {
