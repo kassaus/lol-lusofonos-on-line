@@ -17,7 +17,7 @@
             </div>
             <div id="ContentorMenuCabecalho">
             <div class="menuCabecalho">
-                <a href="#">Página Inicial</a> <a href="#">Perfil</a><asp:LinkButton ID="LinkButton1"
+                <a href="#">Página Inicial</a> <a href="#">Perfil</a><asp:LinkButton ID="btnSair"
                     runat="server" onclick="LinkButton1_Click">Sair</asp:LinkButton>
                 </div>
             </div>

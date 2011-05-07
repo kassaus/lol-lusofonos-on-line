@@ -17,18 +17,15 @@
                     <asp:Image ID="Image1" runat="server" ImageUrl="~/images/redeSocial.png" ImageAlign="Middle" />
                     <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
                     </asp:ToolkitScriptManager>
-                    <asp:SqlDataSource ID="pais" runat="server" 
-                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    <asp:SqlDataSource ID="pais" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
                         SelectCommand="SELECT * FROM [pais]"></asp:SqlDataSource>
-                <asp:SqlDataSource ID="cidade" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-                    SelectCommand="SELECT * FROM [cidade] WHERE ([idPais] = @idPais)">
-                    <SelectParameters>
-                        <asp:ControlParameter ControlID="ddPais" Name="idPais" 
-                            PropertyName="SelectedValue" Type="Int32" />
-                    </SelectParameters>
-                </asp:SqlDataSource>                          
-                        
+                    <asp:SqlDataSource ID="cidade" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="SELECT * FROM [cidade] WHERE ([idPais] = @idPais)">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="ddPais" Name="idPais" PropertyName="SelectedValue"
+                                Type="Int32" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
                 </p>
             </td>
             <td colspan="2" valign="top" width="387" style="border-bottom-style: solid; border-bottom-width: thin;
@@ -75,11 +72,9 @@
                 <asp:Label ID="lblpais" runat="server" Text="País:"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList CssClass="BoxForm" ID="ddPais" runat="server" Width="105px" 
-                    AutoPostBack="True" DataSourceID="pais" DataTextField="pais" 
-                    DataValueField="IdPais">
+                <asp:DropDownList CssClass="BoxForm" ID="ddPais" runat="server" Width="105px" AutoPostBack="True"
+                    DataSourceID="pais" DataTextField="pais" DataValueField="IdPais">
                 </asp:DropDownList>
-
             </td>
         </tr>
         <tr>
@@ -87,11 +82,9 @@
                 <asp:Label ID="Label1" runat="server" Text="Cidade:"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList CssClass="BoxForm" ID="ddCidade" runat="server" Width="203px" 
-                    DataSourceID="cidade" DataTextField="cidade" 
-                    DataValueField="idCidade">
+                <asp:DropDownList CssClass="BoxForm" ID="ddCidade" runat="server" Width="203px" DataSourceID="cidade"
+                    DataTextField="cidade" DataValueField="idCidade">
                 </asp:DropDownList>
-                        
             </td>
         </tr>
         <tr>
@@ -125,6 +118,10 @@
                 <asp:TextBox CssClass="BoxForm" ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvpass1" runat="server" ControlToValidate="txtPass"
                     ErrorMessage="Têm de preencher a Password" ForeColor="Red" ValidationGroup="grupo1">*</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="revPass" runat="server"
+                    ControlToValidate="txtPass" ErrorMessage="Password deve conter uma letra minuscula uma letra maiuscula e um número"
+                    ValidationExpression="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,20}$" ForeColor="red" ValidationGroup="grupo1">*</asp:RegularExpressionValidator><br />
+            
             </td>
         </tr>
         <tr>
@@ -150,21 +147,20 @@
                 border-bottom-color: #a1afcb;" height="50" valign="middle">
                 <p>
                     <asp:Button class="botaoRegisto" ID="btnRegisto" runat="server" ValidationGroup="grupo1"
-                        Text="Regista-te" PostBackUrl="#" onclick="btnRegisto_Click" /></p>
+                        Text="Regista-te" PostBackUrl="#" OnClick="btnRegisto_Click" /></p>
             </td>
         </tr>
         <tr>
             <td colspan="3" align="right">
-                <asp:Label ID="lblErroUserRegistado" runat="server" CssClass="redError" 
+                
+                <asp:Label ID="lblUserValidado" runat="server" CssClass="yellowError" 
                     Text="Label" Visible="False"></asp:Label>
-                <asp:RegularExpressionValidator CssClass="yellowError" ID="revPass" runat="server"
-                    ControlToValidate="txtPass" ErrorMessage="Deve conter uma letra minuscula uma letra maiuscula e um número"
-                    ValidationExpression="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,20}$"></asp:RegularExpressionValidator><br />
-            </td>
+                
+                </td>
         </tr>
         <tr>
             <td colspan="3" align="right">
-                <asp:CompareValidator CssClass="yellowError" ID="CompareValidator1" runat="server"
+                <asp:CompareValidator CssClass="yellowError" ID="error1" runat="server"
                     ControlToCompare="txtPass" ControlToValidate="txtPassConf" ErrorMessage="Password diferentes!"
                     ForeColor="Red"></asp:CompareValidator>
             </td>
