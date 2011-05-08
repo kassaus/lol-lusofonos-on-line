@@ -17,7 +17,7 @@ namespace Face
             string strConexao = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             Gestor dados = new Gestor();
             SqlDataReader canal = null;
-            
+
             if (Session["userEmail"] == null)
             {
                 Response.Redirect("entrada.aspx", false);
@@ -32,11 +32,7 @@ namespace Face
                     imagemLogo.ImageUrl = "~/Image.ashx?email=" + canal["email"].ToString();
 
                 }
-                               
-                
-
             }
-
         }
     }
 }

@@ -24,7 +24,6 @@ namespace ClassesUtil
             acessoBd.setligacao(ligacao); 
             string consultaUser = "select * from Cadastro Where email LIKE @parEmail";
             List<SqlParameter> parametrosUser = new List<SqlParameter>();
-
             parametrosUser.Add(new SqlParameter("@parEmail", SqlDbType.NVarChar) { Value = email });
             return acessoBd.seleccionaDadosParametros(consultaUser, parametrosUser);
         }
@@ -40,6 +39,25 @@ namespace ClassesUtil
             parametros[0].Value = email;
 
             SqlDataReader canal = acessoBd.seleccionaDadosParametros(consulta, parametros);
+            if (canal.HasRows)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
+        }
+        // Retorna true caso o user seja administrador
+        public Boolean administrador(int userId, string ligacao)
+        {
+            acessoBd.setligacao(ligacao);
+            string consulta = "Select tipoAdmin from Administração Where idUser LIKE @parIdUser";
+            List<SqlParameter> parametrosUser = new List<SqlParameter>();
+
+            parametrosUser.Add(new SqlParameter("@parIdUser", SqlDbType.Int) { Value = userId });
+            SqlDataReader canal = acessoBd.seleccionaDadosParametros(consulta, parametrosUser);
             if (canal.HasRows)
             {
                 return true;
