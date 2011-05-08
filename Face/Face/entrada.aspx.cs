@@ -39,10 +39,10 @@ namespace Face
             System.Text.ASCIIEncoding converte = new System.Text.ASCIIEncoding();
 
 
-            BD registo = new BD();
+            Gestor user = new Gestor();
             try
             {
-                bool userValidado = registo.verificaUser(TxtEmail.Text.Trim(), txtPass.Text.Trim(), strConexao);
+                bool userValidado = user.verificaUser(TxtEmail.Text.Trim(), txtPass.Text.Trim(),strConexao);
                 if (userValidado)
                 {
                     lblUserValidado.Visible = true;
@@ -61,9 +61,8 @@ namespace Face
                     campos.Add(txtNome.Text);
                     campos.Add(TxtApelido.Text);
                     campos.Add(ddSexo.SelectedValue);
-                    campos.Add(txtDataNascimento.Text);
-                    campos.Add(converte.GetString(imageData));                    
-                    int registoValido = registo.efectuaRegisto(campos, strConexao);
+                    campos.Add(txtDataNascimento.Text);             
+                    int registoValido = user.efectuaRegisto(campos, strConexao, imageData);
                     if (registoValido != 0)
                     {
                         Response.Redirect("principal.aspx", false);

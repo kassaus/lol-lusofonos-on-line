@@ -27,15 +27,21 @@ namespace Face
         {
             bool loginValido;
             string strConexao = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            BD login = new BD();
+            Gestor user = new Gestor();
             try
             {
-                loginValido = login.verificaUser(TxtEmailLogin.Text, TxtPassLogin.Text, strConexao);
+                loginValido = user.verificaUser(TxtEmailLogin.Text, TxtPassLogin.Text, strConexao);
                 if (loginValido)
                 {
-                    Session["user"] = "Paulo Luís";
-                    Session.Timeout = 1;
-                    Response.Redirect("principal.aspx", false);
+                    SqlDataReader canal;
+                    canal = user.DadosUser(TxtEmailLogin.Text, strConexao);
+                    if (canal.HasRows)
+                    {
+                      canal.Read();
+                        Session["userEmail"] = canal["email"];
+                        Session.Timeout = 1;
+                        Response.Redirect("principal.aspx", false);
+                    }
                 }
                 else
                 {

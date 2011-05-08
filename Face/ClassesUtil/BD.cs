@@ -24,6 +24,11 @@ namespace ClassesUtil
             ligacao = strligacao;
         }
 
+        public void setligacao(string ligacao)
+        {
+            this.ligacao = ligacao;
+        }
+
         protected SqlConnection getligacao()
         {
             SqlConnection retLigacao;
@@ -39,73 +44,7 @@ namespace ClassesUtil
             con = null;
         }
 
-        public Boolean verificaUser(string email, string password, string ligacao)
-        {
-            this.ligacao = ligacao;
-
-            string consulta = "Select * from Users Where email LIKE @parMail";
-            SqlParameter[] parametros = new SqlParameter[1];
-
-            parametros[0] = new SqlParameter("@parMail", SqlDbType.NVarChar);
-            parametros[0].Value = email;
-
-
-
-            SqlDataReader canal = seleccionaDadosParametros(consulta, parametros);
-            if (canal.HasRows)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-
-            }
-        }
-
-        public int efectuaRegisto(IEnumerable<string> campos, string ligacao)
-        {
-            this.ligacao = ligacao;
-            System.Text.ASCIIEncoding converte = new System.Text.ASCIIEncoding();            
-
-            string consultaUser = "insert into Users(email, password) Values(@parEmail, @parPassword)";
-
-            List<SqlParameter> parametrosUser = new List<SqlParameter>();
-
-            parametrosUser.Add(new SqlParameter("@parEmail", SqlDbType.NVarChar) { Value = campos.ElementAt(0) });
-            parametrosUser.Add(new SqlParameter("@parPassword", SqlDbType.NVarChar) { Value = campos.ElementAt(1) });
-
-            int dadosInseridos = insereDados(consultaUser, parametrosUser);
-
-            if (dadosInseridos != 0)
-            {
-                List<SqlParameter> parametrosConsultaIdUser = new List<SqlParameter>();
-                string consultaIdUser = "select * from Users where email LIKE @parEmail";
-                parametrosConsultaIdUser.Add(new SqlParameter("@parEmail", SqlDbType.NVarChar) { Value = campos.ElementAt(0) });
-                SqlDataReader canal = seleccionaDadosParametros(consultaIdUser, parametrosConsultaIdUser);
-               
-                List<SqlParameter> parametrosCadastro = new List<SqlParameter>();
-                string consultaCadastro = "insert into Cadastro(idUser, idCidade, nome, apelido, sexo, dataNascimento, email, imagem)" +
-         "Values(@parIdUser, @parIdCidade, @parNome, @parApelido, @parSexo, @parDataNascimento, @parEmail, @parImagem)";
-               
-                if (canal.HasRows)
-                {                   
-                    canal.Read();
-                    parametrosCadastro.Add(new SqlParameter("@parIdUser", SqlDbType.Int) { Value = canal["idUser"] });
-                    parametrosCadastro.Add(new SqlParameter("@parIdCidade", SqlDbType.Int) { Value = campos.ElementAt(2) });
-                    parametrosCadastro.Add(new SqlParameter("@parNome", SqlDbType.NVarChar) { Value = campos.ElementAt(3) });
-                    parametrosCadastro.Add(new SqlParameter("@parApelido", SqlDbType.NVarChar) { Value = campos.ElementAt(4) });
-                    parametrosCadastro.Add(new SqlParameter("@parSexo", SqlDbType.NVarChar) { Value = campos.ElementAt(5) });
-                    parametrosCadastro.Add(new SqlParameter("@parDataNascimento", SqlDbType.Date) { Value = campos.ElementAt(6) });
-                    parametrosCadastro.Add(new SqlParameter("@parEmail", SqlDbType.NVarChar) { Value = campos.ElementAt(0) });
-                    parametrosCadastro.Add(new SqlParameter("@parImagem", SqlDbType.VarBinary) { Value = converte.GetBytes(campos.ElementAt(7)) });
-
-                    return insereDados(consultaCadastro, parametrosCadastro);
-                }
-            }
-
-            return 0;
-        }
+        
 
         #region Selects
 

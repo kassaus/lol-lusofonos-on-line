@@ -85,6 +85,9 @@
     <Content Include="entrada.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="image.ashx.cs">
+      <DependentUpon>image.ashx</DependentUpon>
+    </Compile>
     <Compile Include="layoutAdmin.master.cs">
       <DependentUpon>layoutAdmin.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,6 +187,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="layoutAdmin.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

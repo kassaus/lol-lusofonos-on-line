@@ -318,6 +318,7 @@ div#ContentorMenuCabecalho
     vertical-align: top;
 }
 
+
 .letraBrancoPeq
 {
     font-size: xx-small;
@@ -424,6 +425,24 @@ padding-left:20px;
 
 .userState a {
 text-decoration:underline;
+}
+
+.imagemLogo
+{
+    position:relative;
+    left:5px;
+    width:100px;
+}
+
+.labelLogo
+{
+    position:absolute;
+    top:30px;
+    width:125px;
+    height:48px;
+    left:100px;
+    margin-left:0px;
+    text-align:left;
 }
 
 .listaMenu 
