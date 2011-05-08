@@ -9,9 +9,12 @@
             <div class="userState">
                 <h3>
                     Olá</h3>
-                    <asp:Image ID="imgLogo"  CssClass="imagemLogo" runat="server" />
-                    <div class="labelLogo">
-                <a href="#">NOME</a><br />
+                    <asp:Image ID="imagemLogo"  runat="server" CssClass="imagemLogo" />               
+                <div class="labelLogo">
+                <a href="#">
+                    <asp:Label ID="lblNome" runat="server" Text=""></asp:Label></a><br /><br />
+                <br />
+                <a href="#">editar perfil</a><br />
                 </div>
             </div>
             <div class="listaMenu">

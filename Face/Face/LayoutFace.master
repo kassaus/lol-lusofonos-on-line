@@ -22,7 +22,7 @@
                     LOLbook</h3>
                 <li><a href="#" rel="nofollow">
                     <img align="middle" src="images/amigos.png" alt="amigos" height="20" />Amigos</a></li>
-                <li><a href="#" rel="nofollow">
+                <li><a href="mensagens.aspx" rel="nofollow">
                     <img align="middle" src="images/escreverMsg.png" alt="mensagens" height="20" />Mensagens</a></li>
                 <li><a href="#" rel="nofollow">
                     <img align="middle" src="images/categorias.png" alt="categorias" height="20" />Categorias</a></li>

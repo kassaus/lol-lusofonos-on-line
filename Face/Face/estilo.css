@@ -350,6 +350,13 @@ div#ContentorMenuCabecalho
     font-weight: normal;    
 }
 
+.letraAzulGrande
+{
+    color: #051b47;
+    font-size:x-large;
+    font-weight: bold;    
+}
+
 .letraCinzento
 {
     color:#666;
@@ -430,8 +437,9 @@ text-decoration:underline;
 .imagemLogo
 {
     position:relative;
-    left:5px;
+    left:6px;
     width:100px;
+    top: 0px;
 }
 
 .labelLogo

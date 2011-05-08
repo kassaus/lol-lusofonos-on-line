@@ -37,10 +37,21 @@ namespace Face
                     canal = user.DadosUser(TxtEmailLogin.Text, strConexao);
                     if (canal.HasRows)
                     {
+                        bool admin;
                       canal.Read();
                         Session["userEmail"] = canal["email"];
                         Session.Timeout = 1;
-                        Response.Redirect("principal.aspx", false);
+                        admin = user.administrador(Convert.ToInt32(canal["idUser"]), strConexao);
+                        if (admin)
+                        {
+                            Response.Redirect("principalAdmin.aspx", false);
+                        }
+                        else
+                        {
+                            Response.Redirect("principal.aspx", false);
+                        }
+
+                        
                     }
                 }
                 else

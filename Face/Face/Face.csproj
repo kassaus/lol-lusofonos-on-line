@@ -71,6 +71,7 @@
     <Content Include="images\registo.png" />
     <Content Include="images\user.png" />
     <Content Include="loginIncorrecto.aspx" />
+    <Content Include="mensagens.aspx" />
     <Content Include="pageAdmin.aspx" />
     <Content Include="principal.aspx" />
     <Content Include="principalAdmin.aspx" />
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="loginIncorrecto.aspx.designer.cs">
       <DependentUpon>loginIncorrecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mensagens.aspx.cs">
+      <DependentUpon>mensagens.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mensagens.aspx.designer.cs">
+      <DependentUpon>mensagens.aspx</DependentUpon>
     </Compile>
     <Compile Include="pageAdmin.aspx.cs">
       <DependentUpon>pageAdmin.aspx</DependentUpon>
