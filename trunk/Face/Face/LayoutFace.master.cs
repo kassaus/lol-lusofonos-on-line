@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ClassesUtil;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Face
 {
@@ -11,13 +14,27 @@ namespace Face
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user"] == null)
+            string strConexao = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            Gestor dados = new Gestor();
+            SqlDataReader canal = null;
+            
+            if (Session["userEmail"] == null)
             {
                 Response.Redirect("entrada.aspx", false);
             }
             else
             {
-                lblNome.Text = Session["user"].ToString();
+                canal = dados.DadosUser(Session["userEmail"].ToString(), strConexao);
+                if (canal.HasRows)
+                {
+                    canal.Read();
+                    lblNome.Text = canal["nome"].ToString();
+                    imagemLogo.ImageUrl = "~/Image.ashx?email=" + canal["email"].ToString();
+
+                }
+                               
+                
+
             }
 
         }

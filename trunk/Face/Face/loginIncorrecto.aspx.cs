@@ -20,10 +20,10 @@ namespace Face
         {
             bool loginValido;
             string strConexao = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            BD login = new BD();
+            Gestor admin = new Gestor();
             try
             {
-                loginValido = login.verificaUser(txtEmailErro.Text, TxtPasswordErro.Text, strConexao);
+                loginValido = admin.verificaUser(txtEmailErro.Text, TxtPasswordErro.Text, strConexao);
                 if (loginValido)
                 {
                     Response.Redirect("principal.aspx", false);

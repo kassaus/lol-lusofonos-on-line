@@ -9,8 +9,10 @@
             <div class="userState">
                 <h3>
                     Olá</h3>
-                <img align="left" src="images/user.png" alt="Eu" width="32" height="48" />
+                    <asp:Image ID="imgLogo"  CssClass="imagemLogo" runat="server" />
+                    <div class="labelLogo">
                 <a href="#">NOME</a><br />
+                </div>
             </div>
             <div class="listaMenu">
                 <h3>

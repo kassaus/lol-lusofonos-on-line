@@ -16,6 +16,7 @@ namespace Face
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
+            Session.RemoveAll();
             Response.Redirect("entrada.aspx", false);
         }
 
