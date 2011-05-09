@@ -17,28 +17,25 @@ namespace ClassesUtil
         }
         BD acessoBd = new BD();
 
-        /* devolve todos os dados da tabela cadastro referentes ao utilizador identificado pelo email passado
+        /* devolve todos os dados da tabela referida na consulta referentes ao utilizador identificado pelo email passado
             por argumento*/
-        public SqlDataReader DadosUser(string email, string ligacao)
+        public SqlDataReader DadosUser(string email, string ligacao, string consulta)
         {
-            acessoBd.setligacao(ligacao); 
-            string consultaUser = "select * from Cadastro Where email LIKE @parEmail";
+            acessoBd.setligacao(ligacao);             
             List<SqlParameter> parametrosUser = new List<SqlParameter>();
             parametrosUser.Add(new SqlParameter("@parEmail", SqlDbType.NVarChar) { Value = email });
-            return acessoBd.seleccionaDadosParametros(consultaUser, parametrosUser);
+            return acessoBd.seleccionaDadosParametros(consulta, parametrosUser);
         }
 
         //Verifica se o utilizador está registado na base de dados, devolve true se existir.
-        public Boolean verificaUser(string email, string password, string ligacao)
+        public Boolean verificaUser(string email, string password, string ligacao, string consulta)
         {
-            acessoBd.setligacao(ligacao);            
-            string consulta = "Select * from Users Where email LIKE @parMail";
-            SqlParameter[] parametros = new SqlParameter[1];
+            acessoBd.setligacao(ligacao);
+            List<SqlParameter> parametrosUser = new List<SqlParameter>();
+            parametrosUser.Add(new SqlParameter("@parEmail", SqlDbType.NVarChar) { Value = email });
+            parametrosUser.Add(new SqlParameter("@parPassword", SqlDbType.NVarChar) { Value = password });            
 
-            parametros[0] = new SqlParameter("@parMail", SqlDbType.NVarChar);
-            parametros[0].Value = email;
-
-            SqlDataReader canal = acessoBd.seleccionaDadosParametros(consulta, parametros);
+            SqlDataReader canal = acessoBd.seleccionaDadosParametros(consulta, parametrosUser);
             if (canal.HasRows)
             {
                 return true;

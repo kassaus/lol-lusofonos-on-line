@@ -8,7 +8,9 @@
         <div id="contentorMenu">
             <div class="userState">
                 <h3>
-                    Olá</h3>
+                    Olá&nbsp;
+                    <asp:Label ID="lblEstatuto" runat="server">Administrador</asp:Label>
+                </h3>
                     <asp:Image ID="imagemLogo"  runat="server" CssClass="imagemLogo" />               
                 <div class="labelLogo">
                 <a href="#">

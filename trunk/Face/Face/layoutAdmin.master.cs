@@ -24,7 +24,8 @@ namespace Face
             }
             else
             {
-                canal = dados.DadosUser(Session["userEmail"].ToString(), strConexao);
+                string consulta = "select * from Cadastro Where email LIKE @parEmail";
+                canal = dados.DadosUser(Session["userEmail"].ToString(), strConexao, consulta);
                 if (canal.HasRows)
                 {
                     canal.Read();

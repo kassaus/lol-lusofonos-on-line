@@ -18,7 +18,7 @@
             <div class="AreaLogin">
                 <div class="divUserName">
                     <asp:Label ID="Label1" runat="server" Text="Email" CssClass="letraBrancoPeq"></asp:Label><br />
-                    <asp:TextBox CssClass="BoxLogin" ID="TxtEmailLogin" runat="server"></asp:TextBox><br />
+                    <asp:TextBox CssClass="BoxLogin" ID="TxtEmailLogin" runat="server">beatriz@gmail.com</asp:TextBox><br />
                     <asp:CheckBox class="letraAzulPeq" ID="chksessao" runat="server" 
                         Text="Manter sessão iniciada" oncheckedchanged="chksessao_CheckedChanged" />
                 </div>
