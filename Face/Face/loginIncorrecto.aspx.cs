@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using ClassesUtil;
+using System.Data.SqlClient;
 
 namespace Face
 {
@@ -20,13 +21,33 @@ namespace Face
         {
             bool loginValido;
             string strConexao = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            Gestor admin = new Gestor();
+            Gestor user = new Gestor();
             try
             {
-                loginValido = admin.verificaUser(txtEmailErro.Text, TxtPasswordErro.Text, strConexao);
+                string consulta = "Select * from Users Where email LIKE @parEmail and password LIKE @parPassword";
+                loginValido = user.verificaUser(txtEmailErro.Text, TxtPasswordErro.Text, strConexao, consulta);
                 if (loginValido)
                 {
-                    Response.Redirect("principal.aspx", false);
+                    SqlDataReader canal;
+                    string consultaCadastro = "select * from Cadastro Where email LIKE @parEmail";
+                    canal = user.DadosUser(txtEmailErro.Text, strConexao, consultaCadastro);
+                    if (canal.HasRows)
+                    {
+                        bool admin;
+                        canal.Read();
+                        Session["userEmail"] = canal["email"];
+                        Session["userId"] = canal["idUser"];
+                        Session.Timeout = 1;
+                        admin = user.administrador(Convert.ToInt32(canal["idUser"]), strConexao);
+                        if (admin)
+                        {
+                            Response.Redirect("principalAdmin.aspx", false);
+                        }
+                        else
+                        {
+                            Response.Redirect("principal.aspx", false);
+                        }
+                    }
                 }
                 else
                 {

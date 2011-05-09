@@ -30,16 +30,19 @@ namespace Face
             Gestor user = new Gestor();
             try
             {
-                loginValido = user.verificaUser(TxtEmailLogin.Text, TxtPassLogin.Text, strConexao);
+                string consulta = "Select * from Users Where email LIKE @parEmail and password LIKE @parPassword";
+                loginValido = user.verificaUser(TxtEmailLogin.Text, TxtPassLogin.Text, strConexao, consulta);
                 if (loginValido)
                 {
                     SqlDataReader canal;
-                    canal = user.DadosUser(TxtEmailLogin.Text, strConexao);
+                    string consultaCadastro = "select * from Cadastro Where email LIKE @parEmail";
+                    canal = user.DadosUser(TxtEmailLogin.Text, strConexao, consultaCadastro);
                     if (canal.HasRows)
                     {
                         bool admin;
                       canal.Read();
                         Session["userEmail"] = canal["email"];
+                        Session["userId"] = canal["idUser"];
                         Session.Timeout = 1;
                         admin = user.administrador(Convert.ToInt32(canal["idUser"]), strConexao);
                         if (admin)
@@ -49,9 +52,7 @@ namespace Face
                         else
                         {
                             Response.Redirect("principal.aspx", false);
-                        }
-
-                        
+                        }                        
                     }
                 }
                 else
