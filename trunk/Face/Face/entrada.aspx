@@ -93,7 +93,7 @@
             </td>
             <td>
                 <asp:TextBox CssClass="BoxForm" ID="txtDataNascimento" runat="server"></asp:TextBox>
-                <asp:CalendarExtender ID="txtDataNascimento_CalendarExtender" runat="server" TargetControlID="txtDataNascimento">
+                <asp:CalendarExtender ID="txtDataNascimento_CalendarExtender" runat="server" TargetControlID="txtDataNascimento" Format= "dd / MM /yyyy">
                 </asp:CalendarExtender>
             </td>
         </tr>

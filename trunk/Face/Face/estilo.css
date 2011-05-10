@@ -325,6 +325,13 @@ div#ContentorMenuCabecalho
     color: #FFFFFF;
 }
 
+.letraBrancoMedia
+{
+    font-size: x-small;
+    color: #FFFFFF;
+    font-weight:bold;
+}
+
 .letraAzulPeq
 {
     font-size: xx-small;
