@@ -63,13 +63,16 @@
     <Content Include="images\categorias.png" />
     <Content Include="images\denuncias.png" />
     <Content Include="images\escreverMsg.png" />
+    <Content Include="images\estado.png" />
     <Content Include="images\faceBook.JPG" />
+    <Content Include="images\fotos.png" />
     <Content Include="images\logo.gif" />
     <Content Include="images\fundo.jpg" />
     <Content Include="images\mensagens.png" />
     <Content Include="images\redeSocial.png" />
     <Content Include="images\registo.png" />
     <Content Include="images\user.png" />
+    <Content Include="images\videos.png" />
     <Content Include="loginIncorrecto.aspx" />
     <Content Include="mural.aspx" />
     <Content Include="pageAdmin.aspx" />
