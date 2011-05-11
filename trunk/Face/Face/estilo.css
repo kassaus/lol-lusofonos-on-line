@@ -3,8 +3,9 @@ body
     margin: 0px;
     padding: 0px;
     font-family: "lucida grande" , tahoma, verdana, arial, sans-serif;
-    font-size: 12px; 
+    font-size: 12px;
     background-image: url('images/fundo.jpg');
+    background-repeat:repeat;
 }
 
 /* Alteração dos parâmetros da tag de link */

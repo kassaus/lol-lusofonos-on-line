@@ -256,22 +256,13 @@ namespace Face {
         protected global::System.Web.UI.WebControls.Label lblFoto;
         
         /// <summary>
-        /// TxtFoto control.
+        /// fupImagem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtFoto;
-        
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.FileUpload fupImagem;
         
         /// <summary>
         /// btnRegisto control.
@@ -281,6 +272,15 @@ namespace Face {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRegisto;
+        
+        /// <summary>
+        /// lblUserValidado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUserValidado;
         
         /// <summary>
         /// ValidationSummary1 control.
