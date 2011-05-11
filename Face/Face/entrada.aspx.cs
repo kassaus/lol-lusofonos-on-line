@@ -42,7 +42,7 @@ namespace Face
             Gestor user = new Gestor();
             try
             {
-                string consulta = "Select * from Users Where email LIKE @parMail";
+                string consulta = "Select * from Users Where email LIKE @parEmail";
                 bool userValidado = user.verificaUser(TxtEmail.Text.Trim(), txtPass.Text.Trim(),strConexao, consulta);
                 if (userValidado)
                 {

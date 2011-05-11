@@ -39,9 +39,9 @@ namespace Face
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                // Alguma coisa................
+                //verificar o que se consegue colocar, response não dá!!!!!!!!!!!!! VERIFICAR NA AULA
             }
         }
 
