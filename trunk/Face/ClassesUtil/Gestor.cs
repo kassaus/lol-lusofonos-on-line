@@ -11,10 +11,12 @@ namespace ClassesUtil
     public class Gestor
     {
         string ligacao = null;
+
         public Gestor()
         {
 
         }
+
         BD acessoBd = new BD();
 
         /* devolve todos os dados da tabela referida na consulta referentes ao utilizador identificado pelo email passado
@@ -46,6 +48,9 @@ namespace ClassesUtil
 
             }
         }
+
+
+
         // Retorna true caso o user seja administrador
         public Boolean administrador(int userId, string ligacao)
         {

@@ -41,7 +41,32 @@
                 <td>
                     <asp:MultiView ID="MultiView2" runat="server">
                         <asp:View ID="View2" runat="server">
-                            Estado
+                            <table style="width: 100%">
+                                <tr>
+                                    <td>
+                                        <asp:TextBox ID="txtMensagens" runat="server" Columns="80" TextMode="MultiLine"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-left: 0px">
+                                        <asp:DropDownList ID="ddCategoriaMensagem" runat="server" 
+                                            DataSourceID="SqlDataSource1" DataTextField="categoria" 
+                                            DataValueField="idCategoria">
+                                        </asp:DropDownList>
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                            ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                            SelectCommand="SELECT * FROM [Categorias]"></asp:SqlDataSource>
+                                        <span style="margin-left: 100px"> <asp:Button ID="btnPartilhar" runat="server" CssClass="botaoRegisto" 
+                                            onclick="btnPartilhar_Click" Text="Partilhar" />
+                                            </span>
+
+                                        <asp:Label ID="lblErroPartilhar" runat="server" CssClass="yellowError" 
+                                            Text="Label" Visible="False"></asp:Label>
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
                         </asp:View>
                         <asp:View ID="View3" runat="server">
                             Fotos
@@ -52,7 +77,8 @@
                     </asp:MultiView><br /><br />
                     <asp:MultiView ID="MultiView3" runat="server" ActiveViewIndex="0">
                     <asp:View ID="View5" runat="server">
-                        Todos
+                        <asp:Table ID="Table1" runat="server">
+                        </asp:Table>
                         </asp:View>
                     </asp:MultiView>
                 </td>
