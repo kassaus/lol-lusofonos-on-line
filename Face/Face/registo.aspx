@@ -87,7 +87,7 @@
             </td>
             <td>
                 <asp:TextBox CssClass="BoxForm" ID="txtDataNascimento" runat="server"></asp:TextBox>
-                <asp:CalendarExtender ID="txtDataNascimento_CalendarExtender" runat="server" TargetControlID="txtDataNascimento">
+                <asp:CalendarExtender ID="txtDataNascimento_CalendarExtender" runat="server" TargetControlID="txtDataNascimento" Format= "dd / MM /yyyy">
                 </asp:CalendarExtender>
             </td>
         </tr>
@@ -129,9 +129,7 @@
                 <asp:Label CssClass="letraCinzento" ID="lblFoto" runat="server" Text="Foto:"></asp:Label>
             </td>
             <td>
-               <asp:TextBox CssClass="BoxForm" ID="TxtFoto" runat="server"></asp:TextBox>&nbsp;&nbsp;
-                <asp:Button CssClass="botaoBrowseFoto" ID="Button1" runat="server" 
-                    Text="Procurar" />
+               <asp:FileUpload ID="fupImagem" runat="server" />
             </td>
         </tr>
         <tr>
@@ -141,13 +139,18 @@
             <td height="50" valign="middle">
                 <p>
                     <asp:Button class="botaoRegisto" ID="btnRegisto" runat="server" ValidationGroup="grupo1"
-                        Text="Regista-te" PostBackUrl="#" /></p>
+                        Text="Regista-te" PostBackUrl="#" onclick="btnRegisto_Click1" /></p>
             </td>
         </tr>
     </table>
     <table align="center">
         <tr>
             <td align="right">
+                <br />
+                
+                <asp:Label ID="lblUserValidado" runat="server" CssClass="yellowError" 
+                    Text="Label" Visible="False"></asp:Label>
+                
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="yellowError"
                     ForeColor="Red" ValidationGroup="grupo1" />
             </td>

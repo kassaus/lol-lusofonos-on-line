@@ -43,7 +43,7 @@ namespace Face
                 
             }
 
-
+            canal.Close();
 
             try
             {
@@ -87,8 +87,19 @@ namespace Face
 
                     linha = new TableRow();
                     linha.Cells.Add(new TableCell());
+                    linha.Cells[0].Font.Size = 7;
+                    linha.Cells[0].Width = new Unit("100%");
+                    linha.Cells[0].ForeColor = Color.Red;
+                    linha.Cells[0].Font.Bold = false;
+                    linha.Cells[0].Text = canal["categoria"].ToString();
+                    Table1.Rows.Add(linha);
+
+                    linha = new TableRow();                    
+                    linha.Cells.Add(new TableCell());
                     linha.Cells.Add(new TableCell());
                     linha.Cells[0].ColumnSpan = 2;
+                    
+                    
                     Table1.Rows.Add(linha);
 
                     //HyperLink link = new HyperLink();
@@ -99,13 +110,9 @@ namespace Face
 
                     //linha.Cells[0].Controls.Add(link);
                     //linha.Cells[0].HorizontalAlign = HorizontalAlign.Right;
-
-
-
-
-
                 
                 }
+                canal.Close();//perguntar se é necessario fechar o canal?????????????????
 
                 
 
