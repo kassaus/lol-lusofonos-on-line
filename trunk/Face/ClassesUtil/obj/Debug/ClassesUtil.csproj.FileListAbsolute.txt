@@ -13,3 +13,8 @@ C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\ClassesUtil\bin\Debug\ClassesUtil.p
 C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\ClassesUtil\obj\Debug\ResolveAssemblyReference.cache
 C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\ClassesUtil\obj\Debug\ClassesUtil.dll
 C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\ClassesUtil\obj\Debug\ClassesUtil.pdb
+R:\SVN\TrabalhoES\Face\ClassesUtil\bin\Debug\ClassesUtil.dll
+R:\SVN\TrabalhoES\Face\ClassesUtil\bin\Debug\ClassesUtil.pdb
+R:\SVN\TrabalhoES\Face\ClassesUtil\obj\Debug\ResolveAssemblyReference.cache
+R:\SVN\TrabalhoES\Face\ClassesUtil\obj\Debug\ClassesUtil.dll
+R:\SVN\TrabalhoES\Face\ClassesUtil\obj\Debug\ClassesUtil.pdb

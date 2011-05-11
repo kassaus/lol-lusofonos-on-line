@@ -19,3 +19,10 @@ C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\Face\bin\ClassesUtil.pdb
 C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\Face\obj\Debug\ResolveAssemblyReference.cache
 C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\Face\obj\Debug\Face.dll
 C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\Face\obj\Debug\Face.pdb
+R:\SVN\TrabalhoES\Face\Face\bin\Face.dll
+R:\SVN\TrabalhoES\Face\Face\bin\Face.pdb
+R:\SVN\TrabalhoES\Face\Face\bin\ClassesUtil.dll
+R:\SVN\TrabalhoES\Face\Face\bin\ClassesUtil.pdb
+R:\SVN\TrabalhoES\Face\Face\obj\Debug\ResolveAssemblyReference.cache
+R:\SVN\TrabalhoES\Face\Face\obj\Debug\Face.dll
+R:\SVN\TrabalhoES\Face\Face\obj\Debug\Face.pdb
