@@ -78,9 +78,9 @@ namespace Face
 
                     linha = new TableRow();
                     linha.Cells.Add(new TableCell());
-                    linha.Cells[0].Font.Size = 10;
+                    linha.Cells[0].Font.Size = 7;
                     linha.Cells[0].Width = new Unit("100%");
-                    linha.Cells[0].ForeColor = Color.Navy;
+                    linha.Cells[0].ForeColor = Color.Red;
                     linha.Cells[0].Font.Bold = false;
                     linha.Cells[0].Text = canal["horaDataMensagem"].ToString();
                     Table1.Rows.Add(linha);
