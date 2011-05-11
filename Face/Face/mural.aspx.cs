@@ -47,13 +47,15 @@ namespace Face
 
             try
             {
-                consulta = "SELECT * FROM ViewMensagensCategorias WHERE idUser LIKE @parIdUser";
+                consulta = "SELECT * FROM ViewMensagensCategorias WHERE idUser LIKE @parIdUser ORDER BY horaDataMensagem DESC";
                 List<SqlParameter> parametrosMensagem = new List<SqlParameter>();
                 
                 parametrosMensagem.Add(new SqlParameter("@parIdUser", SqlDbType.Int) { Value = Convert.ToInt32(Session["userId"]) });
 
+
                 canal = data.seleccionaDadosParametros(consulta, parametrosMensagem);
 
+                
                 while (canal.Read()) {
 
                     TableRow linha = new TableRow();
