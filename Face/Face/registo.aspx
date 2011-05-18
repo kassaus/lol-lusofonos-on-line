@@ -146,6 +146,20 @@
     <table align="center">
         <tr>
             <td align="right">
+                
+                <asp:Label ID="lblValidaApelido" runat="server" CssClass="yellowError" 
+                    Text="Label" Visible="False"></asp:Label>
+                
+                <br />
+                
+                <asp:Label ID="lblValidaNome" runat="server" CssClass="yellowError" 
+                    Text="Label" Visible="False"></asp:Label>
+                
+                <br />
+                
+                <asp:Label ID="lblValidaData" runat="server" CssClass="yellowError" 
+                    Text="Label" Visible="False"></asp:Label>
+                
                 <br />
                 
                 <asp:Label ID="lblUserValidado" runat="server" CssClass="yellowError" 

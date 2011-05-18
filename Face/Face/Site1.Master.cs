@@ -84,5 +84,10 @@ namespace Face
                 Response.Cookies.Add(cookie);
             }
         }
+
+        protected void lbtnpass_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("recuperarPassword.aspx", false);
+        }
     }
 }

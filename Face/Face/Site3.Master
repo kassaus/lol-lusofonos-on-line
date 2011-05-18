@@ -14,7 +14,7 @@
     <div id="contentorCabecalho">
         <div class="cabecalho">
             <div class="AreaLogoCabecalho">
-                <img alt="" src="images/faceBook.jpg" />
+                <a class="linkImagem" href="entrada.aspx"><img style="border: 0px" alt="" src="images/faceBook.jpg" /></a>
             </div>
         </div>
     </div>

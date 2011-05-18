@@ -13,7 +13,7 @@
     <div id="contentorCabecalho">
         <div class="cabecalho">
             <div class="AreaLogoCabecalho">
-                <img alt="" src="images/logo.gif" />
+                <a class="linkImagem" href="entrada.aspx"><img style="border:0px" alt="" src="images/logo.gif" /></a>
             </div>
             <div class="AreaLogin">
                 <div class="divUserName">
@@ -27,7 +27,9 @@
                     <asp:TextBox CssClass="BoxLogin" ID="TxtPassLogin" runat="server" 
                         TextMode="Password"></asp:TextBox><br />
                     <div style="position: inherit; top: 42px">
-                        <asp:Label CssClass="letraAzulPeq" ID="recordaPass" runat="server" Text="Esqueceste-te da tua palavra-passe?"></asp:Label>
+                    
+                <asp:LinkButton ID="lbtnpass" CssClass="letraAzulPeq" runat="server" 
+                            onclick="lbtnpass_Click">Esqueceste-te da tua pass?</asp:LinkButton>
                     </div>
                 </div>
                 <asp:Button class="botaoLogin" ID="btnIniciarSessao" runat="server" 
