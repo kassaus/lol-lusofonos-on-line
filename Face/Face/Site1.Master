@@ -47,6 +47,8 @@
         <tr>
             <td>
                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                   <asp:Panel ID="Panel1" runat="server" Height="82px">
+                   </asp:Panel>
         </asp:ContentPlaceHolder>
             </td>
         </tr>
