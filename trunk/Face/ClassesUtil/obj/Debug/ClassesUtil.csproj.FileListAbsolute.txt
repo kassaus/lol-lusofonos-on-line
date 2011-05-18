@@ -3,11 +3,6 @@ D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\Classe
 D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\ClassesUtil\bin\Debug\ClassesUtil.pdb
 D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\ClassesUtil\obj\Debug\ClassesUtil.dll
 D:\Documentos\Documentos Paulo\Lusofona\Engenharia Software\FaceBook\Face\ClassesUtil\obj\Debug\ClassesUtil.pdb
-D:\svn\es\lol-lusofonos-on-line\Face\ClassesUtil\bin\Debug\ClassesUtil.dll
-D:\svn\es\lol-lusofonos-on-line\Face\ClassesUtil\bin\Debug\ClassesUtil.pdb
-D:\svn\es\lol-lusofonos-on-line\Face\ClassesUtil\obj\Debug\ResolveAssemblyReference.cache
-D:\svn\es\lol-lusofonos-on-line\Face\ClassesUtil\obj\Debug\ClassesUtil.dll
-D:\svn\es\lol-lusofonos-on-line\Face\ClassesUtil\obj\Debug\ClassesUtil.pdb
 C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\ClassesUtil\bin\Debug\ClassesUtil.dll
 C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\ClassesUtil\bin\Debug\ClassesUtil.pdb
 C:\SVN\TrabalhoES\lol-lusofonos-on-line\Face\ClassesUtil\obj\Debug\ResolveAssemblyReference.cache
@@ -18,3 +13,13 @@ R:\SVN\TrabalhoES\Face\ClassesUtil\bin\Debug\ClassesUtil.pdb
 R:\SVN\TrabalhoES\Face\ClassesUtil\obj\Debug\ResolveAssemblyReference.cache
 R:\SVN\TrabalhoES\Face\ClassesUtil\obj\Debug\ClassesUtil.dll
 R:\SVN\TrabalhoES\Face\ClassesUtil\obj\Debug\ClassesUtil.pdb
+D:\svn\es\lol-lusofonos-on-line\Face\ClassesUtil\bin\Debug\ClassesUtil.dll
+D:\svn\es\lol-lusofonos-on-line\Face\ClassesUtil\bin\Debug\ClassesUtil.pdb
+D:\svn\es\lol-lusofonos-on-line\Face\ClassesUtil\obj\Debug\ResolveAssemblyReference.cache
+D:\svn\es\lol-lusofonos-on-line\Face\ClassesUtil\obj\Debug\ClassesUtil.dll
+D:\svn\es\lol-lusofonos-on-line\Face\ClassesUtil\obj\Debug\ClassesUtil.pdb
+C:\Users\Paulo Luís\Desktop\Face\ClassesUtil\bin\Debug\ClassesUtil.dll
+C:\Users\Paulo Luís\Desktop\Face\ClassesUtil\bin\Debug\ClassesUtil.pdb
+C:\Users\Paulo Luís\Desktop\Face\ClassesUtil\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Paulo Luís\Desktop\Face\ClassesUtil\obj\Debug\ClassesUtil.dll
+C:\Users\Paulo Luís\Desktop\Face\ClassesUtil\obj\Debug\ClassesUtil.pdb

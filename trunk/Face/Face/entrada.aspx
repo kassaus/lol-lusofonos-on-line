@@ -146,12 +146,27 @@
             <td align="center" colspan="2" style="border-bottom-width: medium; border-bottom-style: solid;
                 border-bottom-color: #a1afcb;" height="50" valign="middle">
                 <p>
-                    <asp:Button class="botaoRegisto" ID="btnRegisto" runat="server" ValidationGroup="grupo1"
+                    <asp:Button CssClass="botaoRegisto" ID="btnRegisto" runat="server" ValidationGroup="grupo1"
                         Text="Regista-te" PostBackUrl="#" OnClick="btnRegisto_Click" /></p>
             </td>
         </tr>
         <tr>
             <td colspan="3" align="right">
+                
+                <asp:Label ID="lblValidaApelido" runat="server" CssClass="yellowError" 
+                    Text="Label" Visible="False"></asp:Label>
+                
+                <br />
+                
+                <asp:Label ID="lblValidaNome" runat="server" CssClass="yellowError" 
+                    Text="Label" Visible="False"></asp:Label>
+                
+                <br />
+                
+                <asp:Label ID="lblValidaData" runat="server" CssClass="yellowError" 
+                    Text="Label" Visible="False"></asp:Label>
+                
+                <br />
                 
                 <asp:Label ID="lblUserValidado" runat="server" CssClass="yellowError" 
                     Text="Label" Visible="False"></asp:Label>
@@ -179,7 +194,7 @@
                 &nbsp;
             </td>
             <td>
-                &nbsp;
+             
             </td>
         </tr>
         <tr>

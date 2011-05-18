@@ -76,13 +76,13 @@ namespace Face {
         protected global::System.Web.UI.WebControls.TextBox TxtPassLogin;
         
         /// <summary>
-        /// recordaPass control.
+        /// lbtnpass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label recordaPass;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnpass;
         
         /// <summary>
         /// btnIniciarSessao control.

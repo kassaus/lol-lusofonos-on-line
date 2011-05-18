@@ -111,6 +111,14 @@ div#ContentorMenuCabecalho
 	font-weight: bold;
 }
 
+.linkImagem a
+{
+    border-style: 0;
+    border-color: 0;
+    border-width: 0px;
+    text-decoration: none;
+    outline-style: none;
+    }
 
 .corpoInterior
 {

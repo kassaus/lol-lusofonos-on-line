@@ -5,6 +5,8 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.IO;
+
 
 namespace ClassesUtil
 {
@@ -17,7 +19,39 @@ namespace ClassesUtil
 
         }
 
-        BD acessoBd = new BD();
+        BD acessoBd = new BD();         
+
+
+
+        public bool comparadatas(DateTime data)
+        {
+            bool res = false;
+            if (data > DateTime.Today)
+            {
+                res = true;
+               
+            }
+            else
+            {
+                res = false;                
+            }
+            return res;
+        } 
+
+
+        /* Verifica se uma string contem um caractere numérico*/
+        public bool contemNumero(string str)
+        {
+            foreach (char c in str)
+            {
+                if (char.IsDigit(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        } 
+
 
         /* devolve todos os dados da tabela referida na consulta referentes ao utilizador identificado pelo email passado
             por argumento*/
@@ -35,7 +69,10 @@ namespace ClassesUtil
             acessoBd.setligacao(ligacao);
             List<SqlParameter> parametrosUser = new List<SqlParameter>();
             parametrosUser.Add(new SqlParameter("@parEmail", SqlDbType.NVarChar) { Value = email });
-            parametrosUser.Add(new SqlParameter("@parPassword", SqlDbType.NVarChar) { Value = password });            
+            if (password != null)
+            {
+                parametrosUser.Add(new SqlParameter("@parPassword", SqlDbType.NVarChar) { Value = password });
+            }
 
             SqlDataReader canal = acessoBd.seleccionaDadosParametros(consulta, parametrosUser);
             if (canal.HasRows)
